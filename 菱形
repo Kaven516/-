@@ -1,0 +1,32 @@
+ -#include <stdio.h>
+int main()
+{
+int i=0;//i表示控制的第几行 
+int k=0;//k表示控制的每一行*的循环次数 
+int j=0;//j表示控制每一行*的循环次数 
+for(i=1;i<=4;i++)//将图形分为两部分，前四行（第一部分） 
+ {
+	for(j=1;j<=4-i;j++)//打印第i行的空格数 
+	{
+		printf(" ");
+	}
+	for(k=1;k<=2*i-1;k++)//打印第i行的*数 
+	{
+		printf("*");
+	}
+	printf("\n");
+}
+for(i=1;i<=3;i++)//后三行和前四行同理 
+{
+	for(j=1;j<=i;j++)
+	{
+		printf(" ");
+	}
+	for(k=1;k<=7-2*i;k++)
+	{
+		printf("*");
+	}
+	printf("\n");
+}
+return 0;
+}
